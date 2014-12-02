@@ -1,0 +1,38 @@
+$(document).ready(function(){
+	$("#registro form").change(function(){
+	var usuarioRegistro = $("#registro form input[name='usuario']").val();
+	var contrasena = $("#registro form input[name='contrasena']").val();
+	var mascota = $("#registro form input[name='mascota']").val();
+	var raza = $("#registro form input[name='raza']").val();
+
+	if(usuarioRegistro=='' || contrasena=='' || mascota=='' || raza==''){
+		$("#registro form button").prop('disabled', true);
+	}else{
+	    $("#registro form button").prop('disabled', false);	
+	}});
+
+
+	// Fecha
+	
+	var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+	var diasSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado");
+	var f=new Date();
+	$("#introduccion #fecha h3").text("Hoy es " + diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+        
+    $("#contenido #modalModificar form").ready(function(){
+		$("#contenido #modalModificar form input[name='usuario']").val(usuario);
+		$("#contenido #modalModificar form input[name='mascota']").val(mascota);
+		$("#contenido #modalModificar form input[name='raza']").val(raza);
+	});
+
+});
+
+function enviarModificarUsuario(){
+	$("#contenido #modalModificar form").submit();
+}
+
+function enviarAgregarImagen(){
+	$("#contenido #modalAgregarImagen form").submit();
+}
+
+
