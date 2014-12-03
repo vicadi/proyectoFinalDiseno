@@ -12,6 +12,10 @@ app.route('/requerimientos')
       sesion: req.user
    });
   });
+  app.route('/vistaPrevia')
+  .get(function(req, res) {
+   res.render('');
+  });
   app.route('/reqPortafolio')
   .post(function(req, res) {
   	generador.generar(req, function(status){
