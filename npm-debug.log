@@ -1,27 +1,261 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'start' ]
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.32
+3 info using node@v0.10.33
 4 verbose node symlink /usr/bin/node
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart proyectoFinal@0.0.0
-7 info start proyectoFinal@0.0.0
-8 verbose unsafe-perm in lifecycle true
-9 info proyectoFinal@0.0.0 Failed to exec start script
-10 error proyectoFinal@0.0.0 start: `node ./bin/www`
-10 error Exit status 8
-11 error Failed at the proyectoFinal@0.0.0 start script.
-11 error This is most likely a problem with the proyectoFinal package,
-11 error not with npm itself.
-11 error Tell the author that this fails on your system:
-11 error     node ./bin/www
-11 error You can get their info via:
-11 error     npm owner ls proyectoFinal
-11 error There is likely additional logging output above.
-12 error System Linux 3.13.0-36-generic
-13 error command "/usr/bin/node" "/usr/bin/npm" "start"
-14 error cwd /home/viana/Documentos/Universidad/Diseño/proyectoFinal
-15 error node -v v0.10.32
-16 error npm -v 1.4.28
-17 error code ELIFECYCLE
-18 verbose exit [ 1, true ]
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/arley/Dropbox/proyectos/proyectoFinalDiseno',
+6 verbose install   [ 'express',
+6 verbose install     'body-parser',
+6 verbose install     'cookie-parser',
+6 verbose install     'morgan',
+6 verbose install     'serve-favicon',
+6 verbose install     'debug',
+6 verbose install     'jade',
+6 verbose install     'stylus',
+6 verbose install     'mongoose',
+6 verbose install     'passport',
+6 verbose install     'passport-local' ] ]
+7 info preinstall proyectoFinal@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping morgan@~1.3.0 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+10 verbose already installed skipping serve-favicon@~2.1.3 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+11 verbose already installed skipping debug@~2.0.0 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+12 verbose already installed skipping jade@~1.6.0 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+13 verbose cache add [ 'stylus@latest', null ]
+14 verbose cache add name=undefined spec="stylus@latest" args=["stylus@latest",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'stylus@latest',
+15 verbose parsed url   path: 'stylus@latest',
+15 verbose parsed url   href: 'stylus@latest' }
+16 verbose cache add [ 'mongoose@latest', null ]
+17 verbose cache add name=undefined spec="mongoose@latest" args=["mongoose@latest",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'mongoose@latest',
+18 verbose parsed url   path: 'mongoose@latest',
+18 verbose parsed url   href: 'mongoose@latest' }
+19 verbose cache add [ 'passport@~0.1.17', null ]
+20 verbose cache add name=undefined spec="passport@~0.1.17" args=["passport@~0.1.17",null]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'passport@~0.1.17',
+21 verbose parsed url   path: 'passport@~0.1.17',
+21 verbose parsed url   href: 'passport@~0.1.17' }
+22 verbose cache add name="stylus" spec="latest" args=["stylus","latest"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'latest',
+23 verbose parsed url   path: 'latest',
+23 verbose parsed url   href: 'latest' }
+24 verbose addNamed [ 'stylus', 'latest' ]
+25 verbose addNamed [ null, null ]
+26 verbose cache add name="mongoose" spec="latest" args=["mongoose","latest"]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: 'latest',
+27 verbose parsed url   path: 'latest',
+27 verbose parsed url   href: 'latest' }
+28 verbose addNamed [ 'mongoose', 'latest' ]
+29 verbose addNamed [ null, null ]
+30 verbose cache add [ 'passport-local@~0.1.6', null ]
+31 verbose cache add name=undefined spec="passport-local@~0.1.6" args=["passport-local@~0.1.6",null]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: 'passport-local@~0.1.6',
+32 verbose parsed url   path: 'passport-local@~0.1.6',
+32 verbose parsed url   href: 'passport-local@~0.1.6' }
+33 verbose cache add name="passport" spec="~0.1.17" args=["passport","~0.1.17"]
+34 verbose parsed url { protocol: null,
+34 verbose parsed url   slashes: null,
+34 verbose parsed url   auth: null,
+34 verbose parsed url   host: null,
+34 verbose parsed url   port: null,
+34 verbose parsed url   hostname: null,
+34 verbose parsed url   hash: null,
+34 verbose parsed url   search: null,
+34 verbose parsed url   query: null,
+34 verbose parsed url   pathname: '~0.1.17',
+34 verbose parsed url   path: '~0.1.17',
+34 verbose parsed url   href: '~0.1.17' }
+35 verbose addNamed [ 'passport', '~0.1.17' ]
+36 verbose addNamed [ null, '>=0.1.17-0 <0.2.0-0' ]
+37 silly lockFile 4c4fcc46-stylus-latest stylus@latest
+38 verbose lock stylus@latest /home/arley/.npm/4c4fcc46-stylus-latest.lock
+39 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+40 verbose lock mongoose@latest /home/arley/.npm/73e949f4-mongoose-latest.lock
+41 silly lockFile ea5895ee-passport-0-1-17 passport@~0.1.17
+42 verbose lock passport@~0.1.17 /home/arley/.npm/ea5895ee-passport-0-1-17.lock
+43 verbose cache add name="passport-local" spec="~0.1.6" args=["passport-local","~0.1.6"]
+44 verbose parsed url { protocol: null,
+44 verbose parsed url   slashes: null,
+44 verbose parsed url   auth: null,
+44 verbose parsed url   host: null,
+44 verbose parsed url   port: null,
+44 verbose parsed url   hostname: null,
+44 verbose parsed url   hash: null,
+44 verbose parsed url   search: null,
+44 verbose parsed url   query: null,
+44 verbose parsed url   pathname: '~0.1.6',
+44 verbose parsed url   path: '~0.1.6',
+44 verbose parsed url   href: '~0.1.6' }
+45 verbose addNamed [ 'passport-local', '~0.1.6' ]
+46 verbose addNamed [ null, '>=0.1.6-0 <0.2.0-0' ]
+47 silly lockFile 1de19954-passport-local-0-1-6 passport-local@~0.1.6
+48 verbose lock passport-local@~0.1.6 /home/arley/.npm/1de19954-passport-local-0-1-6.lock
+49 verbose already installed skipping express@~4.9.0 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+50 silly addNameRange { name: 'passport',
+50 silly addNameRange   range: '>=0.1.17-0 <0.2.0-0',
+50 silly addNameRange   hasData: false }
+51 info addNameTag [ 'stylus', 'latest' ]
+52 verbose already installed skipping body-parser@~1.8.1 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+53 verbose already installed skipping cookie-parser@~1.3.3 /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+54 info addNameTag [ 'mongoose', 'latest' ]
+55 silly addNameRange { name: 'passport-local',
+55 silly addNameRange   range: '>=0.1.6-0 <0.2.0-0',
+55 silly addNameRange   hasData: false }
+56 verbose request where is /passport
+57 verbose request registry https://registry.npmjs.org/
+58 verbose request id 7f0d4ddccbc620bb
+59 verbose url raw /passport
+60 verbose url resolving [ 'https://registry.npmjs.org/', './passport' ]
+61 verbose url resolved https://registry.npmjs.org/passport
+62 verbose request where is https://registry.npmjs.org/passport
+63 info trying registry request attempt 1 at 09:03:04
+64 http GET https://registry.npmjs.org/passport
+65 verbose request where is /passport-local
+66 verbose request registry https://registry.npmjs.org/
+67 verbose url raw /passport-local
+68 verbose url resolving [ 'https://registry.npmjs.org/', './passport-local' ]
+69 verbose url resolved https://registry.npmjs.org/passport-local
+70 verbose request where is https://registry.npmjs.org/passport-local
+71 info trying registry request attempt 1 at 09:03:04
+72 http GET https://registry.npmjs.org/passport-local
+73 verbose request where is /stylus
+74 verbose request registry https://registry.npmjs.org/
+75 verbose url raw /stylus
+76 verbose url resolving [ 'https://registry.npmjs.org/', './stylus' ]
+77 verbose url resolved https://registry.npmjs.org/stylus
+78 verbose request where is https://registry.npmjs.org/stylus
+79 info trying registry request attempt 1 at 09:03:04
+80 verbose etag "DHLLCY3D7RHIIQCD1P6G0I9NF"
+81 http GET https://registry.npmjs.org/stylus
+82 verbose request where is /mongoose
+83 verbose request registry https://registry.npmjs.org/
+84 verbose url raw /mongoose
+85 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+86 verbose url resolved https://registry.npmjs.org/mongoose
+87 verbose request where is https://registry.npmjs.org/mongoose
+88 info trying registry request attempt 1 at 09:03:04
+89 verbose etag "4Y4OA0POU6G3TKEQ8MQ8JCCJ8"
+90 http GET https://registry.npmjs.org/mongoose
+91 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+92 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+93 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+94 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+95 info trying registry request attempt 2 at 09:05:21
+96 http GET https://registry.npmjs.org/passport
+97 info trying registry request attempt 2 at 09:05:21
+98 http GET https://registry.npmjs.org/passport-local
+99 info trying registry request attempt 2 at 09:05:21
+100 verbose etag "DHLLCY3D7RHIIQCD1P6G0I9NF"
+101 http GET https://registry.npmjs.org/stylus
+102 info trying registry request attempt 2 at 09:05:21
+103 verbose etag "4Y4OA0POU6G3TKEQ8MQ8JCCJ8"
+104 http GET https://registry.npmjs.org/mongoose
+105 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+106 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+107 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+108 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT
+109 info trying registry request attempt 3 at 09:08:29
+110 http GET https://registry.npmjs.org/passport
+111 info trying registry request attempt 3 at 09:08:29
+112 http GET https://registry.npmjs.org/passport-local
+113 info trying registry request attempt 3 at 09:08:29
+114 verbose etag "4Y4OA0POU6G3TKEQ8MQ8JCCJ8"
+115 http GET https://registry.npmjs.org/mongoose
+116 info trying registry request attempt 3 at 09:08:29
+117 verbose etag "DHLLCY3D7RHIIQCD1P6G0I9NF"
+118 http GET https://registry.npmjs.org/stylus
+119 silly lockFile ea5895ee-passport-0-1-17 passport@~0.1.17
+120 silly lockFile ea5895ee-passport-0-1-17 passport@~0.1.17
+121 silly lockFile 1de19954-passport-local-0-1-6 passport-local@~0.1.6
+122 silly lockFile 1de19954-passport-local-0-1-6 passport-local@~0.1.6
+123 silly registry.get cb [ 304, undefined ]
+124 verbose etag https://registry.npmjs.org/mongoose from cache
+125 silly registry.get cb [ 304, undefined ]
+126 verbose etag https://registry.npmjs.org/stylus from cache
+127 verbose addNamed [ 'mongoose', '3.8.19' ]
+128 verbose addNamed [ '3.8.19', '3.8.19' ]
+129 silly lockFile 32b89ef2-mongoose-3-8-19 mongoose@3.8.19
+130 verbose lock mongoose@3.8.19 /home/arley/.npm/32b89ef2-mongoose-3-8-19.lock
+131 verbose addNamed [ 'stylus', '0.49.3' ]
+132 verbose addNamed [ '0.49.3', '0.49.3' ]
+133 silly lockFile 8c45e69b-stylus-0-49-3 stylus@0.49.3
+134 verbose lock stylus@0.49.3 /home/arley/.npm/8c45e69b-stylus-0-49-3.lock
+135 silly lockFile 32b89ef2-mongoose-3-8-19 mongoose@3.8.19
+136 silly lockFile 32b89ef2-mongoose-3-8-19 mongoose@3.8.19
+137 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+138 silly lockFile 73e949f4-mongoose-latest mongoose@latest
+139 silly lockFile 8c45e69b-stylus-0-49-3 stylus@0.49.3
+140 silly lockFile 8c45e69b-stylus-0-49-3 stylus@0.49.3
+141 silly lockFile 4c4fcc46-stylus-latest stylus@latest
+142 silly lockFile 4c4fcc46-stylus-latest stylus@latest
+143 info already installed stylus@0.49.3
+144 error network tunneling socket could not be established, cause=connect ETIMEDOUT
+144 error network This is most likely not a problem with npm itself
+144 error network and is related to network connectivity.
+144 error network In most cases you are behind a proxy or have bad network settings.
+144 error network
+144 error network If you are behind a proxy, please make sure that the
+144 error network 'proxy' config is set properly.  See: 'npm help config'
+145 error System Linux 3.13.0-40-generic
+146 error command "/usr/bin/node" "/usr/bin/npm" "install"
+147 error cwd /home/arley/Dropbox/proyectos/proyectoFinalDiseno
+148 error node -v v0.10.33
+149 error npm -v 1.4.28
+150 error code ECONNRESET
+151 verbose exit [ 1, true ]
