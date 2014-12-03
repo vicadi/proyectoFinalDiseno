@@ -3,7 +3,7 @@ extends ../../../views/layout
 block content
 
 	if usuario 
-		h1 HOLA 
+		h1 HOLA #{usuario.user} 
 		#saludo
 			img(src='/images/hola.png')
 			p Ahora danos tus requerimientos para gener tu página de e-comerce
@@ -12,7 +12,7 @@ block content
 		h1 REGISTRO DE CLIENTE
 		#registrar		
 
-			form(method="POST", action="/plantillas/reqPortafolio" enctype="multipart/form-data")
+			form(method="POST", action="/cliente/registrar" enctype="multipart/form-data")
 				table
 					tr
 						td 

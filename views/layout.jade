@@ -8,19 +8,20 @@ html
   script(type="text/javascript" src="js/bootstrap-filestyle.min.js")
   link(rel='stylesheet', href='/css/bootstrap.css')
   link(rel='stylesheet', href='/css/style.css')
+    #{messaje}
 
  body
   #login  
     if usuario 
       #loginActivo
-        p Bienvenido #{usuario.usuario} 
+        p Bienvenido #{usuario.user} 
         a(href='/logout') Salir
     else
       form(method="POST", action="/login")
         table
           tr
             td
-              input(type="text" id="usuarioLogin" name="usuarioLogin" placeholder="Usuario")
+              input(type="text" id="usuarioLogin" name="nickName" placeholder="Usuario")
             td
               input(type="password" name="contrasena" placeholder="Contraseña") 
             td
