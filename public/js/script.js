@@ -9,5 +9,31 @@ $(document).ready(function(){
 			else
 				$('#contenido #requerimientos table #reqPortafolio #imagenPlantilla').attr('src','/images/plantilla3.jpg');
 	});
+
+	var contador;
+	$('#todos').click(function () {
+			if(contador==0){
+	        	$("#pago1").attr('checked', true);
+	        	$("#pago2").attr('checked', true);
+	        	$("#pago3").attr('checked', true);
+	        	$("#pago4").attr('checked', true);
+	        	$("#pago5").attr('checked', true);
+	        	$("#pago6").attr('checked', true);
+	        	$("#pago7").attr('checked', true);
+	        	$("#pago8").attr('checked', true);
+	        	contador=1;
+	        }else{
+	        	$("#pago1").attr('checked', false);
+	        	$("#pago2").attr('checked', false);
+	        	$("#pago3").attr('checked', false);
+	        	$("#pago4").attr('checked', false);
+	        	$("#pago5").attr('checked', false);
+	        	$("#pago6").attr('checked', false);
+	        	$("#pago7").attr('checked', false);
+	        	$("#pago8").attr('checked', false);
+	        	$("#todos").attr('checked', false);
+	        	contador=0;
+	        }
+		});
 })
 

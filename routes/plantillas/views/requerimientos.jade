@@ -42,7 +42,7 @@ block content
 								tr
 									td#celdaCentrada(colspan="3")
 										button(type="submit" class="btn btn-primary") Enviar
-			tr
+			tr#req23
 				td
 					#reqPagos
 						h3 Tipos de Pago
@@ -50,14 +50,59 @@ block content
 							table
 								tr
 									td
-										input(type="radio" name="tipoPago" value="baloto" checked)
+										input(type="radio" id="pago1" value="baloto") 
+										span  Via Baloto
+									td#celdaCentrada
+										img(src='/images/viaBaloto.png')
+								tr
+									td
+										input(type="radio" id="pago2" value="pse") 
+										span Transferencia bancaria PSE
+									td#celdaCentrada
+										img(src='/images/pse.png')
+								tr
+									td
+										input(type="radio" id="pago3" value="credito") 
+										span Tarjeta Crédito
+									td#celdaCentrada
+										img(src='/images/credito.png')
+								tr
+									td
+										input(type="radio" id="pago4" value="debito") 
+										span Tarjeta Débito
+									td#celdaCentrada
+										img(src='/images/debito.png')
+								tr
+									td
+										input(type="radio" id="pago5" value="payPal") 
+										span Paypal
+									td#celdaCentrada
+										img(src='/images/payPal.png')
+								tr
+									td
+										input(type="radio" id="pago6" value="skrill") 
+										span Skrill
+									td#celdaCentrada
+										img(src='/images/skrill.png')
+								tr
+									td
+										input(type="radio" id="pago7" value="westernUnion") 
+										span Western Union
+									td#celdaCentrada
+										img(src='/images/westernUnion.png')
+								tr
+									td
+										input(type="radio" id="pago8" value="puerta") 
+										span Pago contra entrega
+									td#celdaCentrada
+										img(src='/images/puerta.jpg')
+								tr
+									td#celdaCentrada(colspan="2")
+										input(type="radio" id="todos" value="todos") 
+										span Todas las Opciones
+								tr
+									td#celdaCentrada(colspan="2")
+										button(type="submit" class="btn btn-primary") Enviar
 
-
-			Vía Baloto
-Transferencia bancaria PSE
-Tarjetas de Crédito / Débito Locales
-				Paypal
-					Skrill
-						Western Union
 					#reqPromociones
 						h3 Promociones
