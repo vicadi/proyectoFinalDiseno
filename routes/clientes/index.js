@@ -15,15 +15,19 @@ app.route('/registrar')
 
 app.route('/registrar')
   .post(function(req, res) {
-      if (req.body.nickName){
+    if (req.body.nickName){
         var nickName = req.body.nickName.toLowerCase(); 
     }
+    console.log(req.body);
     process.nextTick(function() {
         db.user.findOne({ "nickName" :  nickName }, function(err, user) {
          
             if (user) {
                 req.flash('message', 'That nickName is already taken.');
+                console.log('ya existe');
             } else {
+              if(err)
+                req.flash('message', 'error');
 
                 var newUser= new db.user();
                     newUser.nickName = nickName;
@@ -36,6 +40,7 @@ app.route('/registrar')
                         }
                     }
                     if(user){
+                        console.log('new user created');
                         req.flash('message', 'new user created');   
                     }
                 });

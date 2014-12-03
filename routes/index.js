@@ -15,7 +15,7 @@ app.route('/login')
 
   .post(passport.authenticate('local-login', {
       successRedirect : '/', 
-      failureRedirect : '/', 
+      failureRedirect : '/clientes/registrar', 
       failureFlash : true 
     }));
 

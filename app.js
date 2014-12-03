@@ -11,7 +11,8 @@ var clientes = require('./routes/clientes');
 var plantillas = require('./routes/plantillas');
 var passport = require('passport');
 var flash    = require('connect-flash');
-
+//models
+var models = require('./models');
 
 var app = express();
 
@@ -19,11 +20,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 

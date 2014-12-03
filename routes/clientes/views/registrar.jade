@@ -12,44 +12,44 @@ block content
 		h1 REGISTRO DE CLIENTE
 		#registrar		
 
-			form(method="POST", action="/clientes/registrar" enctype="multipart/form-data")
+			form(method="POST", action="/clientes/registrar")
 				table
 					tr
 						td 
 							p Nombre: 
 						td
-							input(type="text" id="nombreUsuario")
+							input(type="text" name="nombreUsuario")
 						td
 							p Nickname: 
 						td
-							input(type="text" id="nickname")
+							input(type="text" name="nickName")
 					tr 
 						td
 							p Password: 
 						td
-							input(type="password" id="contrasena")
+							input(type="password" name="contrasena")
 						td
 							p Confirmar Password: 
 						td
-							input(type="password" id="confirmarContrasena")
+							input(type="password" name="confirmarContrasena")
 					tr
 						td
 							p Nombre Empresa: 
 						td
-							input(type="text" id="nombreEmpresa")
+							input(type="text" name="nombreEmpresa")
 						td
 							p E-mail:  
 						td
-							input(type="text" id="email")
+							input(type="text" name="email")
 					tr
 						td
 							p Telefono: 
 						td
-							input(type="text" id="telefono")
+							input(type="text" name="telefono")
 						td
 							p Dirección: 
 						td
-							input(type="text" id="direccion")
+							input(type="text" name="direccion")
 					tr 
 						td#celdaCentrada(colspan="4")
 							button(type="submit" class="btn btn-primary") Regitrar 

@@ -3,7 +3,7 @@ module.exports = function(mongoose){
 var bcrypt   = require('bcrypt-nodejs');
 var Schema = mongoose.Schema;
 var userSchema = new Schema({
-	nombre : String,
+	nickName : String,
 	contrasena : String
 });
 userSchema.methods.generateHash = function(contrasena) {

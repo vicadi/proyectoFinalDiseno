@@ -3,7 +3,7 @@ if (!global.hasOwnProperty('db')) {
  
   var mongoose = require('mongoose');
  
-  var dbName = 'vuelos'
+  var dbName = 'diseno'
  
   // the application is executed on the local machine ...
   mongoose.connect('mongodb://localhost/' + dbName);
