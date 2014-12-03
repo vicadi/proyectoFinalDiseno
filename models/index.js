@@ -14,8 +14,7 @@ if (!global.hasOwnProperty('db')) {
     mongoose: mongoose,
  
     //models
-    user:require('./user')(mongoose),
-    vuelo:require('./vuelo')(mongoose)
+    user:require('./user')(mongoose)
     
     // agregar más modelos aquí en caso de haberlos
   };

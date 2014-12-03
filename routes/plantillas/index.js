@@ -10,7 +10,8 @@ app.route('/requerimientos')
    res.render('requerimientos', {
       title: 'requerimientos',
       pesRequerimiento: 'active',
-      sesion: req.user
+      usuario: req.user,
+      message: req.flash("message")
    });
   });
   app.route('/vistaPrevia')

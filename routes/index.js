@@ -6,7 +6,9 @@ app.route('/')
    .get(function(req, res){
    	res.render('home', {
    		title: 'home',
-   		pesHome: 'active' 
+   		pesHome: 'active',
+      usuario: req.user,
+      message: req.flash("message")
    	});
    });
 app.route('/login')
