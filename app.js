@@ -4,10 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 var routes = require('./routes/index');
 var clientes = require('./routes/clientes');
 var plantillas = require('./routes/plantillas');
+var passport = require('passport');
+var flash    = require('connect-flash');
 
 
 var app = express();
@@ -23,6 +26,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Sesiones y cokies
+ app.use(cookieParser());
+ app.use(session({secret: '1234567'}));
+  //passport
+ require('./config/passport')(passport); // pass passport for configuration
+ app.use(passport.initialize());
+ app.use(passport.session()); // persistent login sessions
+ app.use(flash());
 
 app.use('/', routes);
 app.use('/clientes', clientes);
