@@ -46,7 +46,7 @@ block content
 				td
 					#reqPagos
 						h3 Tipos de Pago
-						form
+						form(method="POST", action="/plantillas/reqPagos" enctype="multipart/form-data")
 							table
 								tr
 									td
@@ -98,11 +98,51 @@ block content
 										img(src='/images/puerta.jpg')
 								tr
 									td#celdaCentrada(colspan="2")
-										input(type="radio" id="todos" value="todos") 
+										input(type="radio" id="todosPagos" value="todos") 
 										span Todas las Opciones
 								tr
 									td#celdaCentrada(colspan="2")
 										button(type="submit" class="btn btn-primary") Enviar
 
+				td
 					#reqPromociones
 						h3 Promociones
+						form(method="POST", action="/plantillas/reqPromociones" enctype="multipart/form-data")
+							table
+								tr
+									td
+										input(type="radio" id="prom1" value="cupones") 
+										span  cupones de descuento
+									td#celdaCentrada
+										img(src='/images/cupones.jpg')
+								tr
+									td
+										input(type="radio" id="prom2" value="descuentosDirectos") 
+										span Descuentos directos
+									td#celdaCentrada
+										img(src='/images/descuento.jpg')
+								tr
+									td
+										input(type="radio" id="prom3" value="concursos") 
+										span Concursos
+									td#celdaCentrada
+										img(src='/images/concurso.jpg')
+								tr
+									td
+										input(type="radio" id="prom4" value="reembolsos") 
+										span Reembolsos
+									td#celdaCentrada
+										img(src='/images/reembolso.png')
+								tr
+									td
+										input(type="radio" id="prom5" value="transporte") 
+										span Transporte gratis
+									td#celdaCentrada
+										img(src='/images/transporte.jpg')
+								tr
+									td#celdaCentrada(colspan="2")
+										input(type="radio" id="todosProm" value="todos") 
+										span Todas las Opciones
+								tr
+									td#celdaCentrada(colspan="2")
+										button(type="submit" class="btn btn-primary") Enviar
