@@ -15,10 +15,18 @@ app.route('/requerimientos')
   });
   app.route('/vistaPrevia')
   .get(function(req, res) {
-   res.render('');
+   res.render('vistaPrevia');
   });
+
   app.route('/reqPortafolio')
   .post(function(req, res) {
+  	generador.generar(req, function(status){
+
+  	});
+  });
+
+   app.route('/prueba')
+  .get(function(req, res) {
   	generador.generar(req, function(status){
 
   	});
