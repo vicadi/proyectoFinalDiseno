@@ -1,148 +1,157 @@
 extends ../../../views/layout
 
 block content
-	#requerimientos
-		h2 REQUERIMIENTOS DE PÁGINA
-		table
-			tr
-				td(colspan="2")
-					#reqPortafolio
-						h3 Portafolio y Apariencia
-						form(method="POST", action="/plantillas/reqPortafolio" enctype="multipart/form-data")
-							table
-								tr
-									td
-										p Nombre Página
-									td#celdaCentrada
-										input(type="text" name="nombrePagina")
-									td#celdaCentrada(rowspan="4")
-										img(id="imagenPlantilla" src='/images/plantilla1.jpg')
-								tr
-									td
-										p Logo Página
-									td#celdaCentrada 
-										input(type="file" name="logo" class="filestyle" data-buttonName="btn btn-success" data-size="sm" data-icon="false")
-								tr
-									td
-										p Categoría de productos
-									td#celdaCentrada
-										select(name="categoría" class="form-control")
-											option(value="comida") Comida
-											option(value="automotriz") Automotriz 
-											option(value="tecnologico") Tecnológico
-											option(value="ropa") Ropa
-								tr
-									td
-										p Plantilla 
-									td#celdaCentrada
-										select( id="selectPlantilla" name="plantilla" class="form-control")
-											option(value="plantilla1") Plantilla 1
-											option(value="plantilla2") Plantilla 2
-											option(value="plantilla3") Plantilla 3
-								tr
-									td#celdaCentrada(colspan="3")
-										button(type="submit" class="btn btn-primary") Enviar
-			tr#req23
-				td
-					#reqPagos
-						h3 Tipos de Pago
-						form(method="POST", action="/plantillas/reqPagos" enctype="multipart/form-data")
-							table
-								tr
-									td
-										input(type="radio" id="pago1" value="baloto") 
-										span  Via Baloto
-									td#celdaCentrada
-										img(src='/images/viaBaloto.png')
-								tr
-									td
-										input(type="radio" id="pago2" value="pse") 
-										span Transferencia bancaria PSE
-									td#celdaCentrada
-										img(src='/images/pse.png')
-								tr
-									td
-										input(type="radio" id="pago3" value="credito") 
-										span Tarjeta Crédito
-									td#celdaCentrada
-										img(src='/images/credito.png')
-								tr
-									td
-										input(type="radio" id="pago4" value="debito") 
-										span Tarjeta Débito
-									td#celdaCentrada
-										img(src='/images/debito.png')
-								tr
-									td
-										input(type="radio" id="pago5" value="payPal") 
-										span Paypal
-									td#celdaCentrada
-										img(src='/images/payPal.png')
-								tr
-									td
-										input(type="radio" id="pago6" value="skrill") 
-										span Skrill
-									td#celdaCentrada
-										img(src='/images/skrill.png')
-								tr
-									td
-										input(type="radio" id="pago7" value="westernUnion") 
-										span Western Union
-									td#celdaCentrada
-										img(src='/images/westernUnion.png')
-								tr
-									td
-										input(type="radio" id="pago8" value="puerta") 
-										span Pago contra entrega
-									td#celdaCentrada
-										img(src='/images/puerta.jpg')
-								tr
-									td#celdaCentrada(colspan="2")
-										input(type="radio" id="todosPagos" value="todos") 
-										span Todas las Opciones
-								tr
-									td#celdaCentrada(colspan="2")
-										button(type="submit" class="btn btn-primary") Enviar
 
-				td
-					#reqPromociones
-						h3 Promociones
-						form(method="POST", action="/plantillas/reqPromociones" enctype="multipart/form-data")
-							table
-								tr
-									td
-										input(type="radio" id="prom1" value="cupones") 
-										span  cupones de descuento
-									td#celdaCentrada
-										img(src='/images/cupones.jpg')
-								tr
-									td
-										input(type="radio" id="prom2" value="descuentosDirectos") 
-										span Descuentos directos
-									td#celdaCentrada
-										img(src='/images/descuento.jpg')
-								tr
-									td
-										input(type="radio" id="prom3" value="concursos") 
-										span Concursos
-									td#celdaCentrada
-										img(src='/images/concurso.jpg')
-								tr
-									td
-										input(type="radio" id="prom4" value="reembolsos") 
-										span Reembolsos
-									td#celdaCentrada
-										img(src='/images/reembolso.png')
-								tr
-									td
-										input(type="radio" id="prom5" value="transporte") 
-										span Transporte gratis
-									td#celdaCentrada
-										img(src='/images/transporte.jpg')
-								tr
-									td#celdaCentrada(colspan="2")
-										input(type="radio" id="todosProm" value="todos") 
-										span Todas las Opciones
-								tr
-									td#celdaCentrada(colspan="2")
-										button(type="submit" class="btn btn-primary") Enviar
+	if usuario
+
+		#requerimientos
+			h2 REQUERIMIENTOS DE PÁGINA
+			table
+				tr
+					td(colspan="2")
+						#reqPortafolio
+							h3 Portafolio y Apariencia
+							form(method="POST", action="/plantillas/reqPortafolio" enctype="multipart/form-data")
+								table
+									tr
+										td
+											p Nombre Página
+										td#celdaCentrada
+											input(type="text" id="nombrePagina")
+										td#celdaCentrada(rowspan="4")
+											img(id="imagenPlantilla" src='/images/plantilla1.jpg')
+									tr
+										td
+											p Logo Página
+										td#celdaCentrada 
+											input(type="file" name="logo" class="filestyle" data-buttonName="btn btn-success" data-size="sm" data-icon="false")
+									tr
+										td
+											p Categoría de productos
+										td#celdaCentrada
+											select(name="categoría" class="form-control")
+												option(value="comida") Comida
+												option(value="automotriz") Automotriz 
+												option(value="tecnologico") Tecnológico
+												option(value="ropa") Ropa
+									tr
+										td
+											p Plantilla 
+										td#celdaCentrada
+											select( id="selectPlantilla" name="plantilla" class="form-control")
+												option(value="plantilla1") Plantilla 1
+												option(value="plantilla2") Plantilla 2
+												option(value="plantilla3") Plantilla 3
+									tr
+										td#celdaCentrada(colspan="3")
+											button(type="submit" class="btn btn-primary") Enviar
+				tr#req23
+					td
+						#reqPagos
+							h3 Tipos de Pago
+							form(method="POST", action="/plantillas/reqPagos" enctype="multipart/form-data")
+								table
+									tr
+										td
+											input(type="radio" id="pago1" value="baloto") 
+											span  Via Baloto
+										td#celdaCentrada
+											img(src='/images/viaBaloto.png')
+									tr
+										td
+											input(type="radio" id="pago2" value="pse") 
+											span Transferencia bancaria PSE
+										td#celdaCentrada
+											img(src='/images/pse.png')
+									tr
+										td
+											input(type="radio" id="pago3" value="credito") 
+											span Tarjeta Crédito
+										td#celdaCentrada
+											img(src='/images/credito.png')
+									tr
+										td
+											input(type="radio" id="pago4" value="debito") 
+											span Tarjeta Débito
+										td#celdaCentrada
+											img(src='/images/debito.png')
+									tr
+										td
+											input(type="radio" id="pago5" value="payPal") 
+											span Paypal
+										td#celdaCentrada
+											img(src='/images/payPal.png')
+									tr
+										td
+											input(type="radio" id="pago6" value="skrill") 
+											span Skrill
+										td#celdaCentrada
+											img(src='/images/skrill.png')
+									tr
+										td
+											input(type="radio" id="pago7" value="westernUnion") 
+											span Western Union
+										td#celdaCentrada
+											img(src='/images/westernUnion.png')
+									tr
+										td
+											input(type="radio" id="pago8" value="puerta") 
+											span Pago contra entrega
+										td#celdaCentrada
+											img(src='/images/puerta.jpg')
+									tr
+										td#celdaCentrada(colspan="2")
+											input(type="radio" id="todosPagos" value="todos") 
+											span Todas las Opciones
+									tr
+										td#celdaCentrada(colspan="2")
+											button(type="submit" class="btn btn-primary") Enviar
+
+					td
+						#reqPromociones
+							h3 Promociones
+							form(method="POST", action="/plantillas/reqPromociones" enctype="multipart/form-data")
+								table
+									tr
+										td
+											input(type="radio" id="prom1" value="cupones") 
+											span  cupones de descuento
+										td#celdaCentrada
+											img(src='/images/cupones.jpg')
+									tr
+										td
+											input(type="radio" id="prom2" value="descuentosDirectos") 
+											span Descuentos directos
+										td#celdaCentrada
+											img(src='/images/descuento.jpg')
+									tr
+										td
+											input(type="radio" id="prom3" value="concursos") 
+											span Concursos
+										td#celdaCentrada
+											img(src='/images/concurso.jpg')
+									tr
+										td
+											input(type="radio" id="prom4" value="reembolsos") 
+											span Reembolsos
+										td#celdaCentrada
+											img(src='/images/reembolso.png')
+									tr
+										td
+											input(type="radio" id="prom5" value="transporte") 
+											span Transporte gratis
+										td#celdaCentrada
+											img(src='/images/transporte.jpg')
+									tr
+										td#celdaCentrada(colspan="2")
+											input(type="radio" id="todosProm" value="todos") 
+											span Todas las Opciones
+									tr
+										td#celdaCentrada(colspan="2")
+											button(type="submit" class="btn btn-primary") Enviar
+	else
+		h1 ¡LO SENTIMOS!
+	#disculpa
+		img(src='/images/triste.jpg')
+		p Tienes que registrarte o validarte para ingresar requerimientos
+		a(href='/clientes/registrar') Click aqui para registrarte

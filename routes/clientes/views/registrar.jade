@@ -1,4 +1,55 @@
 extends ../../../views/layout
 
 block content
- h1 #{title}
+
+	if usuario 
+		h1 HOLA 
+		#saludo
+			img(src='/images/hola.png')
+			p Ahora danos tus requerimientos para gener tu página de e-comerce
+	else
+
+		h1 REGISTRO DE CLIENTE
+		#registrar		
+
+			form(method="POST", action="/plantillas/reqPortafolio" enctype="multipart/form-data")
+				table
+					tr
+						td 
+							p Nombre: 
+						td
+							input(type="text" id="nombreUsuario")
+						td
+							p Nickname: 
+						td
+							input(type="text" id="nickname")
+					tr 
+						td
+							p Password: 
+						td
+							input(type="password" id="contrasena")
+						td
+							p Confirmar Password: 
+						td
+							input(type="password" id="confirmarContrasena")
+					tr
+						td
+							p Nombre Empresa: 
+						td
+							input(type="text" id="nombreEmpresa")
+						td
+							p E-mail:  
+						td
+							input(type="text" id="email")
+					tr
+						td
+							p Telefono: 
+						td
+							input(type="text" id="telefono")
+						td
+							p Dirección: 
+						td
+							input(type="text" id="direccion")
+					tr 
+						td#celdaCentrada(colspan="4")
+							button(type="submit" class="btn btn-primary") Regitrar 

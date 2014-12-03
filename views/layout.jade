@@ -10,6 +10,27 @@ html
   link(rel='stylesheet', href='/css/style.css')
 
  body
+  #login  
+    if usuario 
+      #loginActivo
+        p Bienvenido #{usuario.usuario} 
+        a(href='/logout') Salir
+    else
+      form(method="POST", action="/login")
+        table
+          tr
+            td
+              input(type="text" id="usuarioLogin" name="usuarioLogin" placeholder="Usuario")
+            td
+              input(type="password" name="contrasena" placeholder="Contraseña") 
+            td
+             button(type="submit" class="btn btn-primary btn-xs") Ingresar
+          tr
+            td
+             a(href='/restaurarContrasena') Olvide Contraseña 
+            td
+             #ventanaRegistro
+              a(href='/clientes/registrar') Registrarse  
   #logo
     a(href='/') 
      img(src='/images/logo.jpg')
