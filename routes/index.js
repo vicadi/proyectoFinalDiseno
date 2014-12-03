@@ -1,5 +1,6 @@
 var express = require('express');
 var app = module.exports = express();
+var passport = require('passport');
 
 app.route('/')
    .get(function(req, res){
@@ -8,3 +9,18 @@ app.route('/')
    		pesHome: 'active' 
    	});
    });
+app.route('/login')
+
+  .post(passport.authenticate('local-login', {
+      successRedirect : '/', 
+      failureRedirect : '/', 
+      failureFlash : true 
+    }));
+
+app.route('/logout')
+
+  .get(function(req, res) {
+    req.logout();
+    res.redirect('/');
+  });
+ 
