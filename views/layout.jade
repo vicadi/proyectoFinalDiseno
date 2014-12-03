@@ -1,7 +1,46 @@
-doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+ head
+  meta(charset="utf-8")
+  title= title
+  script(type='text/javascript', src='/js/jquery-1.10.2.js')
+  script(type='text/javascript', src='/js/bootstrap.js')
+  script(type='text/javascript', src='/js/script.js')
+  script(type="text/javascript" src="js/bootstrap-filestyle.min.js")
+  link(rel='stylesheet', href='/css/bootstrap.css')
+  link(rel='stylesheet', href='/css/style.css')
+
+ body
+  #logo
+    a(href='/') 
+     img(src='/images/logo.jpg')
+  #titulo
+    p GENERA TU PAGINA WEB
+  #barra
+   ul.nav.nav-pills
+    li(class=homeActive)
+     a(href='/') Home
+    li(class=imagenesActive)
+     a(href='/registrar') Registrar
+    li(class=historiasActive)
+     a(href='/requerimientos') Requerimientos
+  #contenido
+   block content
+  
+  #contacto
+   table
+    tr
+     td
+      p Laura Daniela Acosta  20101020002
+    tr
+     td
+      p Oscar Alonso Beltrán  20101020012
+    tr
+     td
+      p Viviana Cadena Díaz  20101020016
+    tr
+     td
+      p Arley Carantón Galeano  20101020017
+    tr
+     td
+      p Universidad Distrital Francisco José de Caldas
+  
