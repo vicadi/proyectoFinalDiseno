@@ -1,6 +1,6 @@
 module.exports.generar = function(json,done) {
   var fs = require('fs');
-  fs.writeFile('./plantillas/planti1/views/index.jade', 'Hola Mundo',function(err) {
+  fs.writeFile('./plantillas/planti1/views/index.jade', json.hola,function(err) {
  // fs.appendFile('./plantillas/planti1/views/index.jade', 'Hola Mundo',function(err) {
     if( err ){
         console.log( err );

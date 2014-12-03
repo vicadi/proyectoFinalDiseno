@@ -20,14 +20,14 @@ app.route('/requerimientos')
 
   app.route('/reqPortafolio')
   .post(function(req, res) {
-  	generador.generar(req, function(status){
+  	generador.generar(req.body, function(status){
 
   	});
   });
 
    app.route('/prueba')
   .get(function(req, res) {
-  	generador.generar(req, function(status){
+  	generador.generar({"hola":"perro"}, function(status){
 
   	});
   });
