@@ -18,17 +18,10 @@
 11 error You can get their info via:
 11 error     npm owner ls proyectoFinal
 11 error There is likely additional logging output above.
-<<<<<<< HEAD
 12 error System Linux 3.13.0-36-generic
 13 error command "/usr/bin/node" "/usr/bin/npm" "start"
 14 error cwd /home/viana/Documentos/Universidad/Diseño/proyectoFinal
 15 error node -v v0.10.32
-=======
-12 error System Linux 3.13.0-40-generic
-13 error command "/usr/bin/node" "/usr/bin/npm" "start"
-14 error cwd /home/arley/Dropbox/proyectos/proyectoFinalDiseno
-15 error node -v v0.10.33
->>>>>>> 7192f807e917fdca7d9de7f62217df0194ce4a96
 16 error npm -v 1.4.28
 17 error code ELIFECYCLE
 18 verbose exit [ 1, true ]
