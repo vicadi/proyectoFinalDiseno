@@ -1,9 +1,7 @@
 var express = require('express');
 var app = module.exports = express();
-<<<<<<< HEAD
-=======
+
 var generador=require("../../modulos/generadorPlantillas");
->>>>>>> 7192f807e917fdca7d9de7f62217df0194ce4a96
 
 app.set('views',__dirname + '/views');
 
