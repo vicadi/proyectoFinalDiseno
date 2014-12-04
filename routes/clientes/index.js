@@ -1,10 +1,22 @@
 var express = require('express');
 var app = module.exports = express();
+var exec = require('child_process').exec;
 
 app.set('views',__dirname + '/views');
 
 app.route('/registrar')
   .get(function(req, res) {
+    var commando="cp -r plantillas/planti1 temporal";
+    exec(commando,
+       function (error, stdout, stderr) {
+        if(error){
+          console.log(error);
+        }
+        else{
+          console.log(stdout);
+        }
+
+       });
    res.render('registrar', {
       title: 'requerimientos',
       pesRegistrar: 'active',
