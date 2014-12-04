@@ -2,7 +2,7 @@ extends ../../../views/layout
 
 block content
 
-	if usuario
+	if !usuario
 
 		#requerimientos
 			h2 REQUERIMIENTOS DE PÁGINA
@@ -18,7 +18,7 @@ block content
 											p Nombre Página
 										td#celdaCentrada
 											input(type="text" name="nombrePagina")
-										td#celdaCentrada(rowspan="4")
+										td#celdaCentrada(rowspan="4" colspan="2")
 											img(id="imagenPlantilla" src='/images/plantilla1.jpg')
 									tr
 										td
@@ -43,66 +43,98 @@ block content
 												option(value="plantilla2") Plantilla 2
 												option(value="plantilla3") Plantilla 3
 									tr
-										td#celdaCentrada(colspan="3")
+										td
+											p Número de páginas
+										td
+											input(type="text" name="numPaginas")
+										td
+											p Redes sociales:
+										td
+											input(type="checkbox" name="redes" value="facebook") 
+											span Facebook &nbsp
+											input(type="checkbox" name="redes" value="twitter") 
+											span Twitter 
+											br 
+											input(type="checkbox" name="redes" value="google+") 
+											span Google+ &nbsp
+											input(type="checkbox" name="redes" value="instagram") 
+											span Instagram 
+									tr
+										td
+											p E-mail
+										td
+											input(type="text" name="contactoEmail")
+										td
+											p Teléfono
+										td
+											input(type="text" name="contactoTelefono")
+									tr
+										td
+											p Dirección
+										td
+											input(type="text" name="direccionLocal")
+										td
+											p Responsable
+										td
+											input(type="text" name="responsable")
+									tr
+										td#celdaCentrada(colspan="4")
 											button(type="submit" class="btn btn-primary") Enviar
 				tr#req23
 					td
 						#reqPagos
 							h3 Tipos de Pago
-							form(method="POST", action="/plantillas/reqPagos" enctype="multipart/form-data")
+							form(method="POST", action="/plantillas/reqPagos")
+
 								table
 									tr
 										td
-											input(type="radio" name="pago1" value="baloto") 
-											span  Via Baloto
+											input(type="checkbox" name="pago" value="viaBaloto") 
+											span Via Baloto 
 										td#celdaCentrada
 											img(src='/images/viaBaloto.png')
 									tr
 										td
-											input(type="radio" name="pago2" value="pse") 
+											input(type="checkbox" name="pago" value="pse") 
 											span Transferencia bancaria PSE
 										td#celdaCentrada
 											img(src='/images/pse.png')
 									tr
 										td
-											input(type="radio" name="pago3" value="credito") 
+											input(type="checkbox" name="pago" value="credito") 
 											span Tarjeta Crédito
 										td#celdaCentrada
 											img(src='/images/credito.png')
 									tr
 										td
-											input(type="radio" name="pago4" value="debito") 
+											input(type="checkbox" name="pago" value="debito") 
 											span Tarjeta Débito
 										td#celdaCentrada
 											img(src='/images/debito.png')
 									tr
 										td
-											input(type="radio" name="pago5" value="payPal") 
+											input(type="checkbox" name="pago" value="payPal") 
 											span Paypal
 										td#celdaCentrada
-											img(src='/images/payPal.png')
+											img#imgPagos(src='/images/payPal.png')
 									tr
 										td
-											input(type="radio" name="pago6" value="skrill") 
+											input(type="checkbox" name="pago" value="skrill") 
 											span Skrill
 										td#celdaCentrada
-											img(src='/images/skrill.png')
+											img#imgPagos(src='/images/skrill.png')
 									tr
 										td
-											input(type="radio" name="pago7" value="westernUnion") 
+											input(type="checkbox" name="pago" value="westernUnion") 
 											span Western Union
 										td#celdaCentrada
-											img(src='/images/westernUnion.png')
+											img#imgPagos(src='/images/westernUnion.png')
 									tr
 										td
-											input(type="radio" name="pago8" value="puerta") 
+											input(type="checkbox" name="pago" value="pagoContraEntrega") 
 											span Pago contra entrega
 										td#celdaCentrada
-											img(src='/images/puerta.jpg')
-									tr
-										td#celdaCentrada(colspan="2")
-											input(type="radio" name="todosPagos" value="todos") 
-											span Todas las Opciones
+											img#imgPagos(src='/images/puerta.jpg')
 									tr
 										td#celdaCentrada(colspan="2")
 											button(type="submit" class="btn btn-primary") Enviar
@@ -114,42 +146,47 @@ block content
 								table
 									tr
 										td
-											input(type="radio" name="prom1" value="cupones") 
+											input(type="checkbox" name="promocion" value="cupones") 
 											span  cupones de descuento
 										td#celdaCentrada
 											img(src='/images/cupones.jpg')
 									tr
 										td
-											input(type="radio" name="prom2" value="descuentosDirectos") 
+											input(type="checkbox" name="promocion" value="descuentosDirectos") 
 											span Descuentos directos
 										td#celdaCentrada
 											img(src='/images/descuento.jpg')
 									tr
 										td
-											input(type="radio" name="prom3" value="concursos") 
+											input(type="checkbox" name="promocion" value="concursos") 
 											span Concursos
 										td#celdaCentrada
 											img(src='/images/concurso.jpg')
 									tr
 										td
-											input(type="radio" name="prom4" value="reembolsos") 
+											input(type="checkbox" name="promocion" value="reembolsos") 
 											span Reembolsos
 										td#celdaCentrada
 											img(src='/images/reembolso.png')
 									tr
 										td
-											input(type="radio" name="prom5" value="transporte") 
+											input(type="checkbox" name="promocion" value="transporte") 
 											span Transporte gratis
 										td#celdaCentrada
 											img(src='/images/transporte.jpg')
 									tr
 										td#celdaCentrada(colspan="2")
-											input(type="radio" name="todosProm" value="todos") 
-											span Todas las Opciones
-									tr
-										td#celdaCentrada(colspan="2")
 											button(type="submit" class="btn btn-primary") Enviar
-	else
+				tr
+					td(colspan="2")
+						#vistaPrevia
+							table
+								tr
+									td#celdaCentrada
+										button(type="button" class="btn btn-primary" name="botonVistaPrevia") Vista Previa Página
+									td#celdaCentrada
+										button(type="button" class="btn btn-primary" name="botonDescargar") Descargar Página
+	else 
 		h1 ¡LO SENTIMOS!
 		#disculpa
 			img(src='/images/triste.jpg')
