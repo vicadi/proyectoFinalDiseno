@@ -2,7 +2,7 @@ extends ../../../views/layout
 
 block content
 
-	if usuario
+	if !usuario
 
 		#requerimientos
 			h2 REQUERIMIENTOS DE PÁGINA
@@ -183,9 +183,11 @@ block content
 							table
 								tr
 									td#celdaCentrada
-										button(type="button" class="btn btn-primary" name="botonVistaPrevia") Vista Previa Página
+										button(type="button" class="btn" name="botonVistaPrevia") 
+											a(href="/plantillas/vistaprevia") Vista Previa Página
 									td#celdaCentrada
-										button(type="button" class="btn btn-primary" name="botonDescargar") Descargar Página
+										button(type="button" class="btn" name="botonDescargar") 
+											a(href="/plantillas/descargar") Descargar Página
 	else 
 		h1 ¡LO SENTIMOS!
 		#disculpa
