@@ -7,61 +7,68 @@ html(xmlns="http://www.w3.org/1999/xhtml")
 		link(rel='stylesheet', href='/css/style.css')
 	body
 		#wrapper
-		<!-- start header -->
 			#logo
 				#1(style="padding-left:70px;padding-top:15px;letter-spacing:-1px;font-size:32px;text-decoration:none !important")
 					a(href="#") Flower Shop
 			#header
-				<div id="nav">
-					<ul>
-						<li><a href="#"	class="current"><span>Christmas </span></a></li>
-						<li><a href="#"	><span>Flowers</span></a></li>
-						<li><a href="#" ><span>Plants</span></a></li>
-						<li><a href="#" ><span>Sale</span></a></li>
-						<li><a href="#" ><span>Martha Stewart</span></a></li>
-					</ul>
-				</div>
-				<div style="background-color:#e6e6ee;"><img src="images/banner.jpg" /></div>
-		<!-- / header -->
-		<!-- start page -->
-		<div id="page"><div class="inner_copy"></div>
-			<!-- start content -->
-			<div id="content">
-				<div class="post">
-					<div class="entry">
-						<table border="0" width="580px">
-							<tr>
-								<td><h4>Chirtsmas</h4><img src="images/img1.jpg" /><br/>Price:$1234</td>
-								<td><h4>Best Sellers</h4><img src="images/img2.jpg" /><br/>Price:$4567</td>
-								<td><h4>Birthday</h4><img src="images/img3.jpg" /><br/>Price:$4321</td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-			<!-- / content -->
-			<!-- start sidebar -->
-			<div id="sidebar">
-				<ul>
-					<li id="search">
-						<h2>Find flowers</h2>
-						<form method="get" action="#">
-							<fieldset>
-							<input type="text" id="s" name="s" value="price" /><br/><br/>
-												<input type="text" id="s" name="s" value="color" /><br/><br/>
-							<input type="submit" id="x" value="Search" />
-							</fieldset>
-						</form>
-					</li>
-				</ul>
-			</div>
-			<div style="clear: both;">&nbsp;</div>
-		</div>
-		<div id="footer">
-			<center>
-				<div class="fleft">Copyright Statement</div>
-				<div class="fright">Design by <a href="http://www.dreamtemplatestudio.com/">Dreamtemplatestudio</a></div>
-				Encuentre m&aacute;s plantillas web gratis <a href="http://www.mejoresplantillasgratis.es" target="_blank">en MPG</a>.
-				</div class="fclear"></div>
-			</center>
-		</div>
+				#nav
+					ul
+						li
+							a(href="#"	class="current")
+								span Christmas
+						li 
+							a(href="#")
+								span Flowers
+						li
+							a(href="#")
+								span Plants
+						li
+							a(href="#") 
+								span Sale
+						li
+							a(href="#")
+								span Martha Stewart
+				#2(style="background-color:#e6e6ee;")
+					img(src="images/banner.jpg")
+		#page
+			#3(class="inner_copy")
+			#content
+				#4(class="post")
+					#5(class="entry")
+						table(border="0" width="580px")
+							tr
+								td
+									h4 Chirtsmas
+									img(src="images/img1.jpg")
+									br Price:$1234
+								td
+									h4 Best Sellers
+									img(src="images/img2.jpg")
+									br Price:$4567
+								td 
+									h4 Birthday
+									img(src="images/img3.jpg")
+									br Price:$4321
+			#sidebar
+				ul
+					li#search
+						h2 Find flowers
+						form(method="get" action="#")
+							fieldset
+								input(type="text" id="s" name="s" value="price")
+								br 
+								br
+								input(type="text" id="s" name="s" value="color")
+								br
+								br
+								input(type="submit" id="x" value="Search")
+			#6(style="clear: both;")
+				&nbsp
+		#footer
+			center
+				#7(class="fleft") Copyright Statement
+				#8(class="fright") Design by 
+					a(href="http://www.dreamtemplatestudio.com/") Dreamtemplatestudio
+				Encuentre m&aacute;s plantillas web gratis 
+				a(href="http://www.mejoresplantillasgratis.es" target="_blank") en MPG
+				#9(class="fclear")

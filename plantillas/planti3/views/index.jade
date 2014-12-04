@@ -1,5 +1,202 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="sk" lang="sk")
+	head
+		meta(http-equiv="Content-Type"	content="text/html;	charset=windows-1250")
+		meta(http-equiv="Content-Language" content="sk")
+		title Real Estate
+		link(rel='stylesheet', href='/css/style.css')
+	body
+		#kontainer
+			#header
+				#logo
+					a(href="")
+						img(src="images/logo.jpg" alt="Real Estate")
+				#trees
+			#navcontainer
+				ul#navlist
+					li#active
+						a(href="#" id="current") ITEM ONE
+					li
+						a(href="#") HOME
+					li
+						a(href="#") ABOUT US
+					li
+						a(href="#") BUYING
+					li
+						a(href="#") SELLING
+					li
+						a(href="#") INSURANCE
+					li
+						a(href="#") CONTACT
+			#1(class="search")
+				#searchwrapper
+					form(action="")
+						#2
+							input(type="text" class="searchbox" name="s" value="")
+						#3
+							input(type="image" src="images/search_button.jpg" class="searchbox_submit" value="")
+			#4(class="clear")
+			#5(class="ic")
+			#topoffers
+				#topoffers-left-arrow
+					a(href="")
+						img(src="images/arrow_left.jpg" alt="more")
+				#topoffers-content
+					#topoffers-content-box
+						#estate1-box
+							h3 Residental Properties
+							img(src="images/temp_estate.jpg" alt="Residetal Properties")
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus accumsan est, vitae ultrices odio adipiscing eget. 
+								br
+								br
+								a(href="") learn more
+						#estate2-box
+							h3 Commercial Properties
+							img(src="images/temp_estate.jpg" alt="Commercial Properties")
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus accumsan est, vitae ultrices odio adipiscing eget. 
+								br
+								br
+								a(href="") learn more
+						#estate3-box
+							h3 Deluxe Properties
+							img(src="images/temp_estate.jpg" alt="Deluxe Properties")
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus accumsan est, vitae ultrices odio adipiscing eget. 
+								br
+								br
+								a(href="") learn more
+						#estate4-box
+							h3 Luxury Properties
+							img(src="images/temp_estate.jpg" alt="Luxury Properties")
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus accumsan est, vitae ultrices odio adipiscing eget. 
+								br
+								br
+								a(href="") learn more
+						#6(class="clear")
+				#topoffers-right-arrow
+					a(href="")
+						img(src="images/arrow_right.jpg" alt="more")
+			#7(class="clear")
+			#lavy-stlpec-box
+				#lavy-stlpec
+					#latest_properties
+						h2 Latest properties
+						#8(class="property")
+							#9(class="property_left")
+								img(src="images/img_01.jpg" alt="property")
+								p 
+									b Two bedroom apartment, Rent, Malacky, Slovakia
+										br Guarantee of the current listing
+							#10(class="property_right")
+								b Rent
+									br 72.000,-EUR
+							#11(class="clear")
+						#12(class="property")
+							#13(class="property_left")
+								img(src="images/img_01.jpg" alt="property")
+								p
+									b Two bedroom apartment, Rent, Malacky, Slovakia
+										br Guarantee of the current listing
+							#14(class="property_right")
+								b Rent
+									br 71.000,-EUR
+							#15(class="clear")
+						#16(class="property")
+							#17(class="property_left")
+								img(src="images/img_01.jpg" alt="property")
+								p
+									b Two bedroom apartment, Rent, Malacky, Slovakia
+									br Guarantee of the current listing
+							#18(class="property_right")
+								b Rent
+									br 70.000,-EUR
+							#19(class="clear")
+						#20(class="property")
+							#21(class="property_left")
+								img(src="images/img_01.jpg" alt="property")
+								p
+									b Two bedroom apartment, Rent, Malacky, Slovakia
+									br Guarantee of the current listing
+							#22(class="property_right")
+								b Rent
+									br 69.000,-EUR
+							#23(class="clear")
+						#24(class="property")
+							#25(class="property_left")
+								img(src="images/img_01.jpg" alt="property")
+								p
+									b Two bedroom apartment, Rent, Malacky, Slovakia
+									br Guarantee of the current listing
+							#26(class="property_right")
+								b Rent
+									br 68.000,-EUR
+							#27(class="clear")
+						#28(class="property")
+							#29(class="property_left")
+								img(src="images/img_01.jpg" alt="property")
+								p
+									b Two bedroom apartment, Rent, Malacky, Slovakia
+									br Guarantee of the current listing
+							#30(class="property_right")
+								b Rent
+									br 67.000,-EUR
+							#31(class="clear")
+			#pravy-stlpec-box
+				#pravy-stlpec
+					#find_property
+						form#form_163050(class="appnitro"  method="post" action="#")
+							h2 Find your property
+							#32
+								label(class="description" for="element_1") Country 
+							#33
+								select(class="element select medium" id="element_1" name="element_1")
+									option(value="1" selected="selected") - Select -
+									option(value="2") Second option
+									option(value="3") Third option
+							#34(class="clear")
+							#35
+								label(class="description" for="element_2") City
+							#36
+								select(class="element select medium" id="element_2" name="element_2")
+									option(value="1" selected="selected") - Select -
+									option(value="2") Second option
+									option(value="3") Third option
+							#37(class="clear")
+							#38
+								label(class="description" for="element_3") Zip code
+							#39
+								select(class="element select medium" id="element_3" name="element_3")
+									option(value="1" selected="selected") - Select -
+									option(value="2") Second option
+									option(value="3") Third option
+							#40(class="clear")
+							#41
+								label(class="description" for="element_4") Price 
+							#42
+								select(class="element select small" id="element_4" name="element_4")
+									option(value="1" selected="selected") - Min -
+									option(value="2") Second option
+									option(value="3") Third option
+							#43(class="clear")
+							#44
+								label(class="description" for="element_5")Price
+							#45
+								select(class="element select small" id="element_5" name="element_5")
+									option(value="1" selected="selected") - Max -
+									option(value="2") Second option
+									option(value="3") Third option
+							#46(class="clear")
+							#47
+								label(class="description" for="element_6") Bedrooms
+							#48
+								select(class="element select small" id="element_6" name="element_6")
+									option(value="1" selected="selected") 2
+									option(value="2") Second option
+									option(value="3") Third option
+							#49(class="clear")
+							#50
+								input#saveForm(class="button_text" type="submit" name="submit" value="Submit")
+		#51(class="clear")
+		#footer
+			p Encuentre m&aacute;s plantillas web gratis 
+				a(href="http://www.mejoresplantillasgratis.es" target="_blank") en MPG
+			p
+				a(href="http://www.x-reality.sk") xreality
