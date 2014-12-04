@@ -73,4 +73,4 @@ input {padding:2px 0;color:#415005;background:#fff;border:#576c04 1px solid;font
 #footer_links li {padding:0 14px;float:left;background:url('images/footerlinks_div.gif') no-repeat 100% 2px}
 #footer_links li#last {padding-right:0;background:none}
 /* Main Model */
-#logo img {margin-top:71px;width:150px;height:200px;overflow:hidden;position:absolute;z-index:1; margin-left: 10px}
+#mainmodel {margin-top:71px;width:211px;height:435px;background:url('images/main_model.gif') no-repeat;overflow:hidden;position:absolute;z-index:1}

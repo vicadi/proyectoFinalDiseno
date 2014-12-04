@@ -70,3 +70,7 @@ input, textarea, select {font-family:"Trebuchet MS", Arial, Helvetica, sans-seri
 #footer-wrap {}
 #footer {width:880px;margin:0 auto;background:#fff2df;border:10px #fff solid}
 #footer p {padding-left:350px}
+#img1{background: url('images/banner.jpg') no-repeat;}
+#img2{background: url('images/img1.jpg') no-repeat;}
+#img3{background: url('images/img2.jpg') no-repeat;}
+#img4{background: url('images/img3.jpg') no-repeat;}
