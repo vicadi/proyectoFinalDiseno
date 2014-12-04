@@ -39,7 +39,7 @@ input {padding:2px 0;color:#415005;background:#fff;border:#576c04 1px solid;font
 #categorymenu ul {position:relative;top:-2px}
 #categorymenu li {width:129px;height:39px;background:url('images/categorymenu_bg_left.gif');background-repeat:no-repeat;position:relative;top:-12px}
 #categorymenu #catmenu_1 {position:static}
-#categorymenu #catmenu_2 {height:32px;background-position:100% 0%;position:static}
+#categorymenu #catmenu_2 {height:32px;background:url('images/categorymenu_bg_right.gif');background-position:100% 0%;position:static}
 #categorymenu #catmenu_3 {position:static}
 #categorymenu #catmenu_4 {height:39px;background:url('images/categorymenu_bg_left.gif');background-position:100% 0%;top:-16px}
 #categorymenu li a {display:block;width:129px;height:32px;background-repeat:no-repeat}
