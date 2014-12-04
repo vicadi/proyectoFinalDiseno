@@ -57,7 +57,7 @@ h3 {color:#3d3832;font-size:100%;margin:15px;border-bottom:1px solid #3d3832;pad
 * html #find_property select {float:right;margin-top:5px;margin-right:120px;font-size:95%}
 #find_property .button_text {background:#54472a;padding:0 4px;color:#fff;font-size:12px;margin-top:3px}
 /* latest properties */
-#latest_properties {background:url(images/latest_bg.jpg) no-repeat;margin-left:35px;font-weight:bold;margin-top:15px;width:630px;height:513px;padding:15px}
+#latest_properties {background:url(images/latest_bg.jpg) no-repeat;margin-left:35px;font-weight:bold;margin-top:15px;width:630px;height:80px;padding:15px}
 .property {border-top:1px solid #a90341;width:590px;padding:13px 0}
 * html .property {border-top:1px solid #8ca436;width:590px;padding:12px 0 5px 0} 
 .property_left {float:left}
