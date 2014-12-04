@@ -14,14 +14,24 @@ app.route('/requerimientos')
       message: req.flash('message')
    });
   });
-  app.route('/vistaPrevia')
+  app.route('/vistaprevia')
   .get(function(req, res) {
    res.render('vistaPrevia');
   });
-
+    app.route('/vistaprevia2')
+  .get(function(req, res) {
+   res.render('vistaPrevia2');
+  });
+    app.route('/vistaprevia3')
+  .get(function(req, res) {
+   res.render('vistaPrevia3');
+  });
   app.route('/reqPortafolio')
   .post(function(req, res) {
     console.log(req.body);
+    generador.generar(req.user, req.body, function(status){
+      console.log(status);
+    });
     res.redirect("/plantillas/requerimientos");
   });
 
