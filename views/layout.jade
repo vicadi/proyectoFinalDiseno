@@ -9,11 +9,11 @@ html
   link(rel='stylesheet', href='/css/bootstrap.css')
   link(rel='stylesheet', href='/css/style.css')
  body
- p #{message}
+  p el estatus es #{message}
   #login  
     if usuario 
       #loginActivo
-        p Bienvenido #{usuario.user} 
+        p Bienvenido #{usuario.nickName}
         a(href='/logout') Salir
     else
       form(method="POST", action="/login")

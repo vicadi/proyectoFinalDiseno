@@ -6,9 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var routes = require('./routes/index');
-var clientes = require('./routes/clientes');
-var plantillas = require('./routes/plantillas');
 var passport = require('passport');
 var flash    = require('connect-flash');
 //models
@@ -16,6 +13,9 @@ var models = require('./models');
 
 var app = express();
 
+var routes = require('./routes/index');
+var clientes = require('./routes/clientes');
+var plantillas = require('./routes/plantillas');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -28,11 +28,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Sesiones y cokies
  app.use(cookieParser());
  app.use(session({secret: '1234567'}));
+  app.use(flash());
   //passport
  require('./config/passport')(passport); // pass passport for configuration
  app.use(passport.initialize());
  app.use(passport.session()); // persistent login sessions
- app.use(flash());
 
 app.use('/', routes);
 app.use('/clientes', clientes);

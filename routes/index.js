@@ -8,7 +8,7 @@ app.route('/')
    		title: 'home',
    		pesHome: 'active',
       usuario: req.user,
-      message: req.flash("message")
+      message: req.flash('message')
    	});
    });
 app.route('/login')

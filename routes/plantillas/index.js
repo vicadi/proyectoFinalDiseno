@@ -11,7 +11,7 @@ app.route('/requerimientos')
       title: 'requerimientos',
       pesRequerimiento: 'active',
       usuario: req.user,
-      message: req.flash("message")
+      message: req.flash('message')
    });
   });
   app.route('/vistaPrevia')
@@ -21,9 +21,8 @@ app.route('/requerimientos')
 
   app.route('/reqPortafolio')
   .post(function(req, res) {
-  	generador.generar(req.body, function(status){
-
-  	});
+    console.log(req.body);
+    res.redirect("/plantillas/requerimientos");
   });
 
    app.route('/prueba')
